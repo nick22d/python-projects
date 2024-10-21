@@ -25,5 +25,5 @@ while True:
 bmi = round((weight / real_height ** 2), 2)
 
 # Display to the user their BMI
-print(f'Since your height is {real_height}m and your weight is {weight}kg, your BMI is {bmi}.')
+print(f"Since your height is {real_height}m and your weight is {weight}kg, your BMI is {bmi}.")
 
