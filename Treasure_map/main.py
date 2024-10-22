@@ -1,3 +1,5 @@
+"""This is a game of a treasure hunt."""
+
 # pylint: disable=anomalous-backslash-in-string
 print('''
  ____________________________________________________________________

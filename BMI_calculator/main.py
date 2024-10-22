@@ -1,3 +1,5 @@
+"""This is a program that calculates one's BMI."""
+
 # Initialise the variables
 height = None
 weight = None

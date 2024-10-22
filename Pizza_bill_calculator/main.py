@@ -1,3 +1,5 @@
+"""This is a program that calculates the price of a pizza."""
+
 # pylint: disable=anomalous-backslash-in-string
 # Add ASCII art
 print(r'''
@@ -86,4 +88,3 @@ TOTAL_BILL = SIZE_FEE + PEPPERONI_FEE + CHEESE_FEE
 
 # Display to the user the total bill
 print(f"The total bill is {TOTAL_BILL}")
-

@@ -1,3 +1,5 @@
+"""This is a program that calculates the individual bill of a group meal."""
+
 # pylint: disable=anomalous-backslash-in-string
 # Add ASCII art
 print('''
