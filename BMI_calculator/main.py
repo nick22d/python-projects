@@ -28,4 +28,3 @@ bmi = round((WEIGHT / real_HEIGHT ** 2), 2)
 
 # Display to the user their BMI
 print(f"Since your HEIGHT is {real_HEIGHT}m and your WEIGHT is {WEIGHT}kg, your BMI is {bmi}.")
-
