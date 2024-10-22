@@ -19,6 +19,8 @@ on:
   schedule:
     - cron: '41 21 * * 0'
 
+needs: lint    
+
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
@@ -29,7 +31,6 @@ jobs:
     # Consider using larger runners or machines with greater resources for possible analysis time improvements.
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
 
-    needs: lint
     permissions:
       # required for all workflows
       security-events: write
