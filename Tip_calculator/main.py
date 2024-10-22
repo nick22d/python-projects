@@ -33,7 +33,7 @@ while True:
 # 10 or 12 or 15. Also handle errors accordingly.
 while True:
     try:
-        tip = int(input("How much tip would you like to give? 10, 12, or 15? ")) 
+        tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
         if tip not in (10, 12, 15):
             print("Please choose a tip from the following values: 10, 12, 15: ")
         else:
@@ -42,7 +42,7 @@ while True:
     except ValueError:
         print("Please choose a tip from the following values: 10, 12, 15: ")
 
-# Ask the user for the number of participants amongst 
+# Ask the user for the number of participants amongst
 # whom the bill will be split.
 while True:
     try:

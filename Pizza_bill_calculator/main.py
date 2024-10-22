@@ -28,7 +28,7 @@ print("Welcome to the Python Pizza Deliveries!")
 # Ask the user to choose their pizza size
 # while performing error handling as well
 while True:
-    try: 
+    try:
         size = str(input("What size pizza do you want? S, M or L: "))
         if size not in ("S", "M", "L"):
             print("Please choose S, M or L: ")
@@ -46,7 +46,7 @@ while True:
         print("Please enter a valid size (i.e. S, M or L): ")
 
 # Ask the user to choose whether or not they
-# want pepperoni on their pizza while 
+# want pepperoni on their pizza while
 # performing error handling
 while True:
     try:
@@ -56,16 +56,16 @@ while True:
         else:
             if pepperoni == "Y" and size == "S":
                 pepperoni_fee = 2
-            elif pepperoni == "Y" and (size == "M" or size == "L"):
+            elif pepperoni == "Y" and size in ("M", "L"):
                 pepperoni_fee = 3
-            else: 
+            else:
                 pepperoni_fee = 0
             break
     except ValueError:
         print("Please choose 'Y' for 'yes' or 'N' for 'no': ")
 
 # Ask the user to choose whether or not they
-# want extra cheese on their pizza while 
+# want extra cheese on their pizza while
 # performing error handling
 while True:
     try:

@@ -12,7 +12,7 @@ while True:
     except ValueError:
         print("Please enter a valid value (i.e. 176): ")
 
-# Ask the user to supply a whole number representing their weight        
+# Ask the user to supply a whole number representing their weight
 while True:
     try:
         weight = int(input("What is your weight in kilograms? "))
