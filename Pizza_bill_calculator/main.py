@@ -25,41 +25,41 @@ print(r'''
 # Greet the user
 print("Welcome to the Python Pizza Deliveries!")
 
-# Ask the user to choose their pizza size
+# Ask the user to choose their pizza SIZE
 # while performing error handling as well
 while True:
     try:
-        size = str(input("What size pizza do you want? S, M or L: "))
-        if size not in ("S", "M", "L"):
+        SIZE = str(input("What SIZE pizza do you want? S, M or L: "))
+        if SIZE not in ("S", "M", "L"):
             print("Please choose S, M or L: ")
         else:
-            if size == "S":
-                size_fee = 15
-            elif size == "M":
-                size_fee = 20
-            elif size == "L":
-                size_fee = 25
+            if SIZE == "S":
+                SIZE_FEE = 15
+            elif SIZE == "M":
+                SIZE_FEE = 20
+            elif SIZE == "L":
+                SIZE_FEE = 25
             else:
-                size_fee = 0
+                SIZE_FEE = 0
             break
     except ValueError:
-        print("Please enter a valid size (i.e. S, M or L): ")
+        print("Please enter a valid SIZE (i.e. S, M or L): ")
 
 # Ask the user to choose whether or not they
-# want pepperoni on their pizza while
+# want PEPPERONI on their pizza while
 # performing error handling
 while True:
     try:
-        pepperoni = str(input("Do you want pepperoni on your pizza? Y or N: "))
-        if pepperoni not in ("Y", "N"):
+        PEPPERONI = str(input("Do you want PEPPERONI on your pizza? Y or N: "))
+        if PEPPERONI not in ("Y", "N"):
             print("Please choose Y or N: ")
         else:
-            if pepperoni == "Y" and size == "S":
-                pepperoni_fee = 2
-            elif pepperoni == "Y" and size in ("M", "L"):
-                pepperoni_fee = 3
+            if PEPPERONI == "Y" and SIZE == "S":
+                PEPPERONI_FEE = 2
+            elif PEPPERONI == "Y" and SIZE in ("M", "L"):
+                PEPPERONI_FEE = 3
             else:
-                pepperoni_fee = 0
+                PEPPERONI_FEE = 0
             break
     except ValueError:
         print("Please choose 'Y' for 'yes' or 'N' for 'no': ")
@@ -69,21 +69,21 @@ while True:
 # performing error handling
 while True:
     try:
-        extra_cheese = str(input("Do you want extra cheese? Y or N: "))
-        if extra_cheese not in ("Y", "N"):
+        EXTRA_CHEESE = str(input("Do you want extra cheese? Y or N: "))
+        if EXTRA_CHEESE not in ("Y", "N"):
             print("Please choose Y or N: ")
         else:
-            if extra_cheese == "Y":
-                cheese_fee = 1
+            if EXTRA_CHEESE == "Y":
+                CHEESE_FEE = 1
             else:
-                cheese_fee = 0
+                CHEESE_FEE = 0
             break
     except ValueError:
         print("Please choose 'Y' for 'yes' or 'N' for 'no': ")
 
 # Calculate the total bill
-total_bill = size_fee + pepperoni_fee + cheese_fee
+TOTAL_BILL = SIZE_FEE + PEPPERONI_FEE + CHEESE_FEE
 
 # Display to the user the total bill
-print(f"The total bill is {total_bill}")
+print(f"The total bill is {TOTAL_BILL}")
 
