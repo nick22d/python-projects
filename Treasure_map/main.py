@@ -29,4 +29,13 @@ print('''
  \_/__________________________________________________________________/
 ''')
 
-PASSWORD = 123456
+def login():
+    # Vulnerable code: Hardcoded PASSWORD
+    USERNAME = "admin"
+    PASSWORD = "12345"  # Hardcoded PASSWORD
+    if input("Enter USERNAME: ") == USERNAME and input("Enter PASSWORD: ") == PASSWORD:
+        print("Login successful")
+    else:
+        print("Login failed")
+
+login()
