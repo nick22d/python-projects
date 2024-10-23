@@ -36,8 +36,8 @@ jobs:
           # Github token of the repository (automatically created by Github)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information.
       - name: Run Bandit Security Check
-          run: bandit -r . --exit-zero --severity-level medium
-       # Stop the workflow if Bandit fails
+        run: bandit -r . --severity-level medium
+
       - name: Fail on Bandit findings
         run: exit 1
         if: failure()
