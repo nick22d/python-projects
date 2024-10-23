@@ -35,6 +35,14 @@ jobs:
           exit_zero: true # optional, default is DEFAULT
           # Github token of the repository (automatically created by Github)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information.
+      - name: Run Bandit Security Check
+         run: |
+           # Run Bandit and fail if any medium or high-severity issues are found
+           bandit -r . --exit-zero --severity-level medium
+       # Stop the workflow if Bandit fails
+      - name: Fail on Bandit findings
+        run: exit 1
+        if: failure()
           # File or directory to run bandit on
           # path: # optional, default is .
           # Report only issues of a given severity level or higher. Can be LOW, MEDIUM or HIGH. Default is UNDEFINED (everything)

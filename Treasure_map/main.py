@@ -28,3 +28,24 @@ print('''
  / \----- ----- ------------  ------- ----- -------  --------  -------/
  \_/__________________________________________________________________/
 ''')
+
+def login():
+    """
+    Adds two numbers and returns the result.
+
+    Args:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The sum of the two numbers.
+    """
+    # Vulnerable code: Hardcoded PASSWORD
+    USERNAME = "admin" # pylint: disable=invalid-name
+    PASSWORD = "12345" # pylint: disable=invalid-name
+    if input("Enter USERNAME: ") == USERNAME and input("Enter PASSWORD: ") == PASSWORD:
+        print("Login successful")
+    else:
+        print("Login failed")
+
+login()
