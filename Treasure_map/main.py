@@ -34,7 +34,8 @@ print("Welcome to the Treasure Island.\nYour mission is to find the treasure.")
 while True:
     try:
         DIRECTION = str(input("Left or right? "))
-        if DIRECTION in ("LEFT", "left", "Left"):
+        # pylint: disable=no-else-break
+        if DIRECTION in ("LEFT", "left", "Left"): 
             break
         else:
             print("Fall into a hole.\nGame Over.")
@@ -44,6 +45,7 @@ while True:
 while True:
     try:
         SWIM_OR_WAIT = str(input("Swim or wait? "))
+        # pylint: disable=no-else-break
         if SWIM_OR_WAIT in ("WAIT", "wait", "Wait"):
             break
         else:
