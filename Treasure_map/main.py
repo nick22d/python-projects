@@ -57,7 +57,7 @@ while True:
         if WHICH_DOOR == "Yellow":
             print("You Win!")
             break
-        elif WHICH_DOOR == "Red":
+        if WHICH_DOOR == "Red":
             print("Burned by fire.\nGame Over.")
             break
         elif WHICH_DOOR == "Blue":
@@ -68,4 +68,3 @@ while True:
             break
     except ValueError:
         print("Please specify the door you want to open: ")
-
