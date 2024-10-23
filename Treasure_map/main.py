@@ -28,3 +28,44 @@ print('''
  / \----- ----- ------------  ------- ----- -------  --------  -------/
  \_/__________________________________________________________________/
 ''')
+
+print("Welcome to the Treasure Island.\nYour mission is to find the treasure.")
+
+while True:
+    try:
+        DIRECTION = str(input("Left or right? "))
+        if DIRECTION in ("LEFT", "left", "Left"):
+            break
+        else:
+            print("Fall into a hole.\nGame Over.")
+    except ValueError:
+        print("Please enter an appropriate value: ")
+
+while True:
+    try:
+        SWIM_OR_WAIT = str(input("Swim or wait? "))
+        if SWIM_OR_WAIT in ("WAIT", "wait", "Wait"):
+            break
+        else:
+            print("Attacked by trout.\nGame Over.")
+    except ValueError:
+        print("Please specify 'swim' or 'wait': ")
+
+while True:
+    try:
+        WHICH_DOOR = str(input("Which door? "))
+        if WHICH_DOOR == "Yellow":
+            print("You Win!")
+            break
+        elif WHICH_DOOR == "Red":
+            print("Burned by fire.\nGame Over.")
+            break
+        elif WHICH_DOOR == "Blue":
+            print("Eaten by beasts.\nGame Over.")
+            break
+        else:
+            print("Game Over.")
+            break
+    except ValueError:
+        print("Please specify the door you want to open: ")
+
