@@ -60,10 +60,10 @@ while True:
         if WHICH_DOOR == "Red":
             print("Burned by fire.\nGame Over.")
             break
-        elif WHICH_DOOR == "Blue":
+        if WHICH_DOOR == "Blue":
             print("Eaten by beasts.\nGame Over.")
             break
-        else:
+        if WHICH_DOOR not in ("Yellow", "Red", "Blue"):
             print("Game Over.")
             break
     except ValueError:
