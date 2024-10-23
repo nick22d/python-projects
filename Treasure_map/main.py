@@ -35,7 +35,7 @@ while True:
     try:
         DIRECTION = str(input("Left or right? "))
         # pylint: disable=no-else-break
-        if DIRECTION in ("LEFT", "left", "Left"): 
+        if DIRECTION in ("LEFT", "left", "Left"):
             break
         else:
             print("Fall into a hole.\nGame Over.")
