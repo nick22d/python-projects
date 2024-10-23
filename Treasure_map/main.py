@@ -29,10 +29,11 @@ print('''
  \_/__________________________________________________________________/
 ''')
 
+"""This is a game of a treasure hunt game."""
 def login():
     # Vulnerable code: Hardcoded PASSWORD
-    USERNAME = "admin"
-    PASSWORD = "12345"  # Hardcoded PASSWORD
+    USERNAME = "admin" # pylint: disable=invalid-name
+    PASSWORD = "12345" # pylint: disable=invalid-name
     if input("Enter USERNAME: ") == USERNAME and input("Enter PASSWORD: ") == PASSWORD:
         print("Login successful")
     else:
