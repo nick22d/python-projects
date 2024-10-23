@@ -29,7 +29,6 @@ print('''
  \_/__________________________________________________________________/
 ''')
 
-"""This is a game of a treasure hunt game."""
 def login():
     # Vulnerable code: Hardcoded PASSWORD
     USERNAME = "admin" # pylint: disable=invalid-name
