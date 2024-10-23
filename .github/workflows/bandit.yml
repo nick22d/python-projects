@@ -35,9 +35,10 @@ jobs:
           exit_zero: true # optional, default is DEFAULT
           # Github token of the repository (automatically created by Github)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information.
+      # Cause the workflow to fail if any security issue is detected    
       - name: Run Bandit Security Check
-        run: bandit -r . --severity-level low
-
+        run: bandit -r . 
+      # Stop the workflow if Bandit fails
       - name: Fail on Bandit findings
         run: exit 1
         if: failure()
