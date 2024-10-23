@@ -13,7 +13,7 @@
 name: Bandit
 on:
   workflow_run:
-    workflows: ["CodeQL Advanced"]
+    workflows: ["Pylint"]
     types:
       - completed
 

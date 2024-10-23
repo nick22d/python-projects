@@ -13,7 +13,7 @@ name: "CodeQL Advanced"
 
 on:
   workflow_run:
-    workflows: ["Pylint"]
+    workflows: ["Bandit"]
     types:
       - completed
 
