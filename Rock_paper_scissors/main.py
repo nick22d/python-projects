@@ -2,7 +2,7 @@
 
 # Import the variables file containing the icons
 # and the random module for the computer's input
-import variables, random
+import random, variables
 
 # pylint: disable=anomalous-backslash-in-string
 print('''
@@ -70,4 +70,3 @@ while True:
             break
     except ValueError:
         print("Please enter 0 for Rock, 1 for Paper or 2 for Scissors: ")
-        
