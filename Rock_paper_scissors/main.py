@@ -37,7 +37,7 @@ OUTCOMES = {
 while True:
     try:
         # Define the variable that will store the computer's choice
-        COMPUTER_INPUT = random.choice(CHOICES)
+        COMPUTER_INPUT = random.choice(CHOICES) # nosec
         # Define the variable that will store the user's choice
         USER_INPUT = int(input("What do you choose?"
                                "Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
