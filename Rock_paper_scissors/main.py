@@ -5,8 +5,7 @@
 import random, variables
 
 # pylint: disable=anomalous-backslash-in-string
-print('''
-                _                                         _                        
+print('''       _                                         _                        
                | |                                       (_)                       
  _ __ ___   ___| | ___ __   __ _ _ __   ___ _ __ ___  ___ _ ___ ___  ___  _ __ ___ 
 | '__/ _ \ / __| |/ / '_ \ / _` | '_ \ / _ \ '__/ __|/ __| / __/ __|/ _ \| '__/ __|
@@ -21,6 +20,12 @@ WIN_MESSAGE = "You win."
 LOSE_MESSAGE = "You lose."
 DRAW_MESSAGE = "It's a draw."
 
+OUTCOMES = {
+    (0, 0): DRAW_MESSAGE, (0, 1): LOSE_MESSAGE, (0, 2): WIN_MESSAGE,
+    (1, 0): WIN_MESSAGE, (1, 1): DRAW_MESSAGE, (1, 2): LOSE_MESSAGE,
+    (2, 0): LOSE_MESSAGE, (2, 1): WIN_MESSAGE, (2, 2): DRAW_MESSAGE,
+}
+
 while True:
     try:
         COMPUTER_INPUT = random.choice(CHOICES)
@@ -30,43 +35,14 @@ while True:
             print("Please enter 0 for Rock, 1 for Paper or 2 for Scissors: ")
             continue
 
-        if USER_INPUT == 0:
-            USER_INPUT = CHOICES[0]
-        elif USER_INPUT == 1:
-            USER_INPUT = CHOICES[1]
-        elif USER_INPUT == 2:
-            USER_INPUT = CHOICES[2]
+        # Map user input to corresponding choice
+        user_choice = CHOICES[USER_INPUT]
+        print(f"User's choice: {user_choice}")
+        print(f"Computer's choice: {COMPUTER_INPUT}")
 
-        print(USER_INPUT)
-
-        print(f"Computer chose: {COMPUTER_INPUT}")
-
-        if USER_INPUT == CHOICES[0] and COMPUTER_INPUT == variables.ROCK:
-            print(DRAW_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[0] and COMPUTER_INPUT == variables.PAPER:
-            print(LOSE_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[0] and COMPUTER_INPUT == variables.SCISSORS:
-            print(WIN_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[1] and COMPUTER_INPUT == variables.ROCK:
-            print(WIN_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[1] and COMPUTER_INPUT == variables.PAPER:
-            print(DRAW_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[1] and COMPUTER_INPUT == variables.SCISSORS:
-            print(LOSE_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[2] and COMPUTER_INPUT == variables.ROCK:
-            print(LOSE_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[2] and COMPUTER_INPUT == variables.PAPER:
-            print(WIN_MESSAGE)
-            break
-        elif USER_INPUT == CHOICES[2] and COMPUTER_INPUT == variables.SCISSORS:
-            print(DRAW_MESSAGE)
-            break
+        # Determine the result using the dictionary
+        result_message = OUTCOMES[(USER_INPUT, CHOICES.index(COMPUTER_INPUT))]
+        print(result_message)
+        break  # Exit after printing the result    
     except ValueError:
         print("Please enter 0 for Rock, 1 for Paper or 2 for Scissors: ")
