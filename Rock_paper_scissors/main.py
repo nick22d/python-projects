@@ -45,13 +45,13 @@ while True:
             continue
 
         # Map user input to corresponding choice
-        user_choice = CHOICES[USER_INPUT]
-        print(f"User's choice: {user_choice}")
+        USER_CHOICE = CHOICES[USER_INPUT]
+        print(f"User's choice: {USER_CHOICE}")
         print(f"Computer's choice: {COMPUTER_INPUT}")
 
         # Determine the result using the dictionary
-        result_message = OUTCOMES[(USER_INPUT, CHOICES.index(COMPUTER_INPUT))]
-        print(result_message)
+        RESULT_MESSAGE = OUTCOMES[(USER_INPUT, CHOICES.index(COMPUTER_INPUT))]
+        print(RESULT_MESSAGE)
         break  # Exit after printing the result    
     except ValueError:
         print("Please enter 0 for Rock, 1 for Paper or 2 for Scissors: ")
