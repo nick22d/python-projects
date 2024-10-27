@@ -2,7 +2,8 @@
 
 # Import the variables file containing the icons
 # and the random module for the computer's input
-import random, variables
+import random
+import variables
 
 # pylint: disable=anomalous-backslash-in-string
 print('''       _                                         _
