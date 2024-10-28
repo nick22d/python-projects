@@ -33,6 +33,8 @@ for symbol in range(nr_symbols):
 for number in range(nr_numbers):
     password.append(random.choice(numbers))
 
+# Shuffle around the contents of the list at random
 password = random.sample(password, len(password))
 
+# Display the resulting password 
 print(f"Your password is: {''.join(password)}")
