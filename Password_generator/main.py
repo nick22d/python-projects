@@ -23,5 +23,6 @@ for symbol in range(nr_symbols):
 for number in range(nr_numbers):
     password.append(random.choice(numbers))
 
-print("".join(password))
+password = random.sample(password, len(password))
 
+print("".join(password))
