@@ -5,6 +5,7 @@
 - [Rock, Paper, Scissors](./Rock_paper_scissors) - A rock, paper, scissors game.
 - [Tip Calculator](./Tip_calculator) - A calculator that determines the bill of every participant in a group meal.
 - [Treasure Map](./Treasure_map) - An RPG game.
+- [Password Generator](./Password_generator/) - A password generator.
 
 ## Architecture
 ![Diagram](assets/python-projects.drawio.png)
